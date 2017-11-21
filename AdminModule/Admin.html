@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="AdminStyles.css">
+    <link rel="stylesheet" href="AdminModals.css"
   </head>
   <body>
     <div id="siteHead">
@@ -19,13 +20,42 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-med-12">
-          <div>
-            
+    <div id="addItemMod" class="modal">
+      
+      <!-- Modal Content -->
+      <form id="AddProduct" class="modal-content animate" action="">
+        <span onclick="document.getElementById('addItemMod').style.display='none'" 
+        class="close" title="Close Modal">&times;</span>
+        <fieldset>
+          <legend>Add A Product Item</legend>
+          <div class="row">
+            <div class="col-med-6"><label>Product Number:<input type="text"></input></label></div>
+            <div class="col-med-6"><label>Product Name:<input type="text"></input></label></div>
           </div>
-        </div>
+          <div class="row">
+              <div class="col-med-6"><label>Product Description:<input type="text"></input></label></div>
+              <div class="col-med-6"><label>Picture File:<input type="file" accept="image/*"></input></label></div>
+          </div>
+        </fieldset>
+      </form>    
+    </div>
+
+    <div class="container-fluid">
+      <div>
+        <form id="ModifyProducts">
+          <fieldset>
+            <legend>Manage Available Products</legend>
+            <table class="table">
+              <tr>
+                <th>Item No.</th>
+                <th>Item Name</th>
+                <th>Item Description</th>
+                <th>Item Cost</th>
+              </tr>
+            </table>
+            <button type="button" onclick="document.getElementById('addItemMod').style.display='block'">Add a product.</button>
+          </fieldset>
+        </form>
       </div>
     </div>
     <footer class="py-5 bg-dark">
@@ -39,5 +69,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="admin.js"></script>
   </body>
 </html>

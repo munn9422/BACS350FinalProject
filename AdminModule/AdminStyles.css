@@ -1,4 +1,5 @@
 fieldset {
+    width: auto;
     min-width: 0;
     padding: 1rem;
     box-sizing: border-box;
@@ -53,10 +54,6 @@ input[type="text"] {
     color: white;
 }
 
-.cost {
-    
-}
-
 label {
     width: 100%
 }
@@ -73,7 +70,7 @@ button{
     font-size: 1.25rem;
     font-weight: bold;
     background-color:#6666ff;
-    float: right; 
+    float: left; 
 }
 
 button:hover{
@@ -82,4 +79,9 @@ button:hover{
 
 body {
     background-color: white;
+}
+
+input {
+    width: 100%;
+    padding-left: 2rem;
 }
